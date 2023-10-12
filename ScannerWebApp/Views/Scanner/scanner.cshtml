@@ -1,0 +1,59 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@{
+    string dynamicTitle = ViewBag.DynamicTitle;
+    string actionName = ViewBag.ActionName;
+}
+
+@model PaginatedItemsViewModel
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@dynamicTitle Stocks</title>
+    <link rel="stylesheet" href="~/css/styles.css" />
+</head>
+<body>
+    <div class="header">
+        <h1>@dynamicTitle Stocks</h1>
+      @*  <button class="refresh-button" onclick="location.reload();">Refresh</button>*@
+        <a class="button refresh-button" asp-controller="Scanner" asp-action="@actionName">Refresh</a>
+    </div>
+
+    <table>
+        <tr>
+            <th style="width: 50px;">Sr.</th>
+            <th style="width: 400px;">Stock Name</th>
+            <th style="width: 200px;">Symbol</th>
+            <th style="width: 200px;">% Chg</th>
+            <th style="width: 200px;">Price</th>
+            <th style="width: 200px;">Volume</th>
+            @*<th style="width: 200px;"> <a asp-controller="Scanner" asp-action="Index" asp-route-sortOrder="price">Price</a></th>*@
+        </tr>
+        @foreach (var item in Model.stockDatas)
+        {
+            <tr>
+                <td style="width: 50px;">@item.sr</td>
+                <td style="width: 400px;">@item.Name</td>
+                <td style="width: 200px;">@item.NseCode</td>
+                <td style="width: 200px;">@item.per_chg</td>
+                <td style="width: 200px;">@item.Close</td> @* Formats Price as currency *@
+                <td style="width: 200px;">@item.volume</td>
+            </tr>
+        }
+    </table>
+    <div class="pagination-container">
+    <ul class="pagination">
+        @for (int i = 1; i <= Model.TotalPages; i++)
+        {
+            <li class="page-item @(Model.PageNumber == i ? "active" : "")">
+                <a class="page-link" asp-action="@actionName" asp-route-page="@i">@i</a>
+            </li>
+        }
+    </ul>
+    </div>
+</body>
+</html>

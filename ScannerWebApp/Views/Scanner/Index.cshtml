@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Display</title>
+    <link rel="stylesheet" href="~/css/styles.css" />
+</head>
+<body>
+    <div class="button-container">
+        @*<a class="button" asp-controller="Scanner" asp-action="GetDojiStocks">Doji</a>
+        <a class="button" asp-controller="Scanner" asp-action="GetHighPowerSwingStocks">High Power Swing</a>*@
+        <a class="button" asp-controller="Scanner" asp-action="GetIntradayBoostStocks">Intraday Boost</a>
+        <a class="button" asp-controller="Scanner" asp-action="GetFiftyTwoWeeksHighStocks">52 Week High</a>
+        <a class="button" asp-controller="Scanner" asp-action="AnalysisScanner">Analysis Scanner</a>
+        <a class="button" asp-controller="Scanner" asp-action="ExecutionScreener">Execution Screener</a>
+       @* <a class="button" asp-controller="Scanner" asp-action="GetPoleAndFlagStocks">Pole And Flag</a>*@
+        <a class="button" asp-controller="Scanner" asp-action="GetshortStocksDayAgo">Bearish 1 Day Ago</a>
+      @*  <a class="button" asp-controller="Scanner" asp-action="GetRocketIntradayBearishStocks">Intraday Rocket Bullish</a>
+        <a class="button" asp-controller="Scanner" asp-action="GetRocketIntradayBullishStocks">Intraday Rocket Bearish</a>*@
+       @* <a class="button" asp-controller="Scanner" asp-action="GetVCPStocks">VCP</a>*@
+        <a class="button" asp-controller="Scanner" asp-action="GetVolumeBreakoutStocksIntraday">Volume Breakout Intraday</a>
+        <a class="button" asp-controller="Scanner" asp-action="GetSwingStocks">Swing</a>
+  @*      <a class="button" asp-controller="Scanner" asp-action="GetTodaysHighMoveStocks">Intraday High Moves</a>*@
+        <a class="button" asp-controller="Scanner" asp-action="GetThirtyDaysConsolidation">30 Days Consolidation</a>
+        <!-- Add more buttons as needed -->
+    </div>
+</body>
+</html>

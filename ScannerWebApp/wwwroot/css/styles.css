@@ -1,0 +1,271 @@
+﻿/* Style for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+/* Style for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+ Style the table columns 
+th:first-child, td:first-child {
+    width: 10%;
+}
+
+th:nth-child(2), td:nth-child(2) {
+    width: 40%;
+}
+
+th:nth-child(3), td:nth-child(3) {
+    width: 20%;
+}
+
+/* Additional styles as needed */
+
+/* CSS for the button container */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Button style */
+.button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Remove underline on links */
+    /* Box shadow for a subtle elevation effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Hover effect */
+    &:hover
+
+{
+    background-color: #2980b9;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Slightly increase shadow on hover */
+}
+
+/* Transition effect on hover for smoother animation */
+transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* CSS for the header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    //background-color: #3498db;
+    color: #fff;
+}
+
+/* CSS for the h1 element */
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* CSS for the Refresh button */
+.refresh-button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .refresh-button:hover {
+        background-color: #c0392b;
+    }
+
+/* Pagination container style */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Pagination list style */
+.pagination {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+/* Pagination list item style */
+.page-item {
+    margin: 0 5px;
+}
+
+/* Pagination link style */
+.page-link {
+    padding: 5px 10px;
+    border: 1px solid #3498db;
+    background-color: #fff;
+    color: #3498db;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+    /* Hover effect */
+    .page-link:hover {
+        background-color: #3498db;
+        color: #fff;
+    }
+
+/* Active page link style */
+.page-item.active .page-link {
+    background-color: #3498db;
+    color: #fff;
+}
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/*header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+    nav a:hover {
+        color: #3498db;
+    }*/
+
+.hero {
+    background: url('hero-bg.jpg') center/cover no-repeat;
+    text-align: center;
+    padding: 120px 0;
+    color: #fff;
+}
+
+    .hero h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+    .btn:hover {
+        background-color: #2980b9;
+    }
+
+.about, .features, .contact {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+    .about h2, .features h2, .contact h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .about p, .features ul, .contact p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .features ul {
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+
+

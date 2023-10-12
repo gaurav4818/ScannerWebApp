@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Screener</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="hero">
+        <h1>Find the Best Stocks</h1>
+        <p>Use our stock screener to analyze and identify investment opportunities.</p>
+        @*<a href="#start-screening" class="btn">Get Started</a>*@
+        <a class="button" asp-controller="Scanner" asp-action="Index">Check Our Scanner</a>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>We are a leading stock screener platform that provides you with powerful tools to analyze the stock market.</p>
+    </section>
+
+    <section id="features" class="features">
+        <h2>Key Features</h2>
+        <ul>
+            <li>Real-time stock data</li>
+            <li>Customizable screening criteria</li>
+            <li>Technical analysis tools</li>
+            <li>Comprehensive stock information</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need assistance, please feel free to contact us.</p>
+        
+    </section>
+</body>
+</html>
