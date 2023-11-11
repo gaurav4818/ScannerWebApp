@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form | CodingLab</title>
+    <title>Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <style>
         * {
@@ -145,11 +145,10 @@
     <div class="container">
         <div class="wrapper">
             <div class="title"><span>Login Form</span></div>
-            @using (Html.BeginForm("Login", "Account", FormMethod.Post))
-            {
+            <form action="#">
                 <div class="row">
                     <i class="fas fa-user"></i>
-                    @*  <input type="text" placeholder="Email or Phone" required> *@
+                   @*  <input type="text" placeholder="Email or Phone" required> *@
                     @Html.TextBoxFor(m => m.Username, new { @placeholder = "Email or Phone", @required = true })
                 </div>
                 <div class="row">
@@ -162,8 +161,7 @@
                     <input type="submit" value="Login">
                 </div>
                 <div class="signup-link">Not a member? <a href="#">Signup now</a></div>
-            }
-            <div style="color:red;">@ViewBag.message</div>
+            </form>
         </div>
     </div>
 

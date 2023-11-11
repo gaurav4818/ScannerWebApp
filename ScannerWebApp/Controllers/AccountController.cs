@@ -21,7 +21,7 @@ namespace ScannerWebApp.Controllers
             var users = new List<UserCredentials>()
             {
                 new UserCredentials{Username = "Gaurav", Password = "Gaurav@123" },
-                new UserCredentials{Username = "TradeWithV", Password = "TradeWithV@1" },
+                new UserCredentials{Username = "Yash", Password = "Access@Yash" },
             };
             return users;
         }
