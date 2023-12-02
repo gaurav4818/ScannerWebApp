@@ -49,6 +49,9 @@ namespace ScannerWebApp.Services
         {
             string url = "https://flaskapp1234.azurewebsites.net/api/LongStockLiveIntraday";
             var stocks = await aPICallExtension.APICallExtensionMethod(url);
+            //var stock = string.Join(",", stocks.Select(x => x.NseCode));
+            //string sendMsg = $"https://flaskapp1234.azurewebsites.net/api/SendTelegramAlert/{stock}";
+            //var demo = await aPICallExtension.APICallExtensionMethod(sendMsg, true);
             return stocks;
         }
 
@@ -76,6 +79,12 @@ namespace ScannerWebApp.Services
         public async Task<List<StockData>> GetshortStocksDayAgo()
         {
             string url = "https://flaskapp1234.azurewebsites.net/api/ShortStockOneDayAgo";
+            var stocks = await aPICallExtension.APICallExtensionMethod(url);
+            return stocks;
+        }
+        public async Task<List<StockData>> GetshortStocksIntradayLive()
+        {
+            string url = "https://flaskapp1234.azurewebsites.net/api/ShortStockLiveIntraday";
             var stocks = await aPICallExtension.APICallExtensionMethod(url);
             return stocks;
         }

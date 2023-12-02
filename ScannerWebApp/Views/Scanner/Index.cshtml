@@ -8,17 +8,18 @@
     <div class="button-container">
         @*<a class="button" asp-controller="Scanner" asp-action="GetDojiStocks">Doji</a>
         <a class="button" asp-controller="Scanner" asp-action="GetHighPowerSwingStocks">High Power Swing</a>*@
-        <a class="button" asp-controller="Scanner" asp-action="GetIntradayBoostStocks">Intraday Boost</a>
-        <a class="button" asp-controller="Scanner" asp-action="GetFiftyTwoWeeksHighStocks">52 Week High</a>
-        <a class="button" asp-controller="Scanner" asp-action="AnalysisScanner">Bullish 1 Day Ago</a>
-        <a class="button" asp-controller="Scanner" asp-action="ExecutionScreener">Bullish Intraday Live</a>
+        @* <a class="button" asp-controller="Scanner" asp-action="GetIntradayBoostStocks">Intraday Boost</a> *@
+        <a class="button" asp-controller="Scanner" asp-action="AnalysisBullishScanner">Bullish Stock Selection Intraday</a>
+        <a class="button" asp-controller="Scanner" asp-action="ExecutionBullishScreener">Bullish Stock Intraday Live</a>
+        <a class="button" asp-controller="Scanner" asp-action="AnalysisBearishScanner">Bearish Stock Selection Intraday</a>
+        <a class="button" asp-controller="Scanner" asp-action="ExecutionBearishScreener">Bearish Stock Intraday Live</a>
        @* <a class="button" asp-controller="Scanner" asp-action="GetPoleAndFlagStocks">Pole And Flag</a>*@
-        <a class="button" asp-controller="Scanner" asp-action="GetshortStocksDayAgo">Bearish 1 Day Ago</a>
       @*  <a class="button" asp-controller="Scanner" asp-action="GetRocketIntradayBearishStocks">Intraday Rocket Bullish</a>
         <a class="button" asp-controller="Scanner" asp-action="GetRocketIntradayBullishStocks">Intraday Rocket Bearish</a>*@
        @* <a class="button" asp-controller="Scanner" asp-action="GetVCPStocks">VCP</a>*@
+        <a class="button" asp-controller="Scanner" asp-action="GetFiftyTwoWeeksHighStocks">52 Week High Stocks</a>
         <a class="button" asp-controller="Scanner" asp-action="GetVolumeBreakoutStocksIntraday">Volume Breakout Intraday</a>
-        <a class="button" asp-controller="Scanner" asp-action="GetSwingStocks">Swing</a>
+        <a class="button" asp-controller="Scanner" asp-action="GetSwingStocks">Swing Trading Stocks</a>
   @*      <a class="button" asp-controller="Scanner" asp-action="GetTodaysHighMoveStocks">Intraday High Moves</a>*@
         <a class="button" asp-controller="Scanner" asp-action="GetThirtyDaysConsolidation">30 Days Consolidation</a>
         <!-- Add more buttons as needed -->

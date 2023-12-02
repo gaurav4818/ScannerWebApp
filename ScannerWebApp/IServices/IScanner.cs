@@ -8,7 +8,8 @@ namespace ScannerWebApp.IServices
        Task<List<StockData>> GetLongStocksDayAgo();
        Task<List<StockData>> GetshortStocksDayAgo();
        Task<List<StockData>> GetLongStocksIntradayLive();
-       Task<List<StockData>> GetSwingStocks();
+       Task<List<StockData>> GetshortStocksIntradayLive();
+        Task<List<StockData>> GetSwingStocks();
        Task<List<StockData>> GetVolumeBreakoutStocksIntraday();
        Task<List<StockData>> GetIntradayBoostStocks();
        Task<List<StockData>> GetFiftyTwoWeeksHighStocks();

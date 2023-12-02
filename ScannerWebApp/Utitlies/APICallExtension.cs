@@ -6,7 +6,7 @@ namespace ScannerWebApp.Utitlies
     public class APICallExtension
     {
         public APICallExtension() { }
-        public async Task<List<StockData>> APICallExtensionMethod(string url)
+        public async Task<List<StockData>> APICallExtensionMethod(string url,bool isAlert = false)
         {
             List<StockData> stocks = new List<StockData>();
 
@@ -16,7 +16,7 @@ namespace ScannerWebApp.Utitlies
                 if (response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsStringAsync();
-                    if (content != null)
+                    if (content != null && !isAlert)
                     {
                         // Parse the JSON response
                         stocks = JsonConvert.DeserializeObject<List<StockData>>(content);

@@ -62,24 +62,44 @@ namespace ScannerWebApp.Controllers
             ViewBag.DynamicTitle = "Intraday Boost";
             return View("scanner", model);
         }
-        public async Task<IActionResult> AnalysisScannerAsync(int page = 1, int pageSize = 10)
+        public async Task<IActionResult> AnalysisBullishScannerAsync(int page = 1, int pageSize = 10)
         {
             var stocks = await _scanner.GetLongStocksDayAgo();
             string actionName = ControllerContext.ActionDescriptor.ActionName;
             var model = paginationExtension.PaginationExtensionMethod(stocks, page, pageSize);
             ViewBag.ActionName = actionName;
 
-            ViewBag.DynamicTitle = "Analysis Scanner";
+            ViewBag.DynamicTitle = "Intraday Bullish Scanner";
             return View("scanner", model);
         }
-        public async Task<IActionResult> ExecutionScreenerAsync(int page = 1, int pageSize = 10)
+        public async Task<IActionResult> ExecutionBullishScreenerAsync(int page = 1, int pageSize = 10)
         {
             var stocks = await _scanner.GetLongStocksIntradayLive();
             string actionName = ControllerContext.ActionDescriptor.ActionName;
             var model = paginationExtension.PaginationExtensionMethod(stocks, page, pageSize);
             ViewBag.ActionName = actionName;
 
-            ViewBag.DynamicTitle = "Execution Screener";
+            ViewBag.DynamicTitle = "Intraday Live Bullish Scanner";
+            return View("scanner", model);
+        }
+        public async Task<IActionResult> AnalysisBearishScannerAsync(int page = 1, int pageSize = 10)
+        {
+            var stocks = await _scanner.GetshortStocksDayAgo();
+            string actionName = ControllerContext.ActionDescriptor.ActionName;
+            var model = paginationExtension.PaginationExtensionMethod(stocks, page, pageSize);
+            ViewBag.ActionName = actionName;
+
+            ViewBag.DynamicTitle = "Intraday Bearish Scanner";
+            return View("scanner", model);
+        }
+        public async Task<IActionResult> ExecutionBearishScreenerAsync(int page = 1, int pageSize = 10)
+        {
+            var stocks = await _scanner.GetshortStocksIntradayLive();
+            string actionName = ControllerContext.ActionDescriptor.ActionName;
+            var model = paginationExtension.PaginationExtensionMethod(stocks, page, pageSize);
+            ViewBag.ActionName = actionName;
+
+            ViewBag.DynamicTitle = "Intraday Live Bearish Scanner";
             return View("scanner", model);
         }
         public async Task<IActionResult> GetPoleAndFlagStocksAsync(int page = 1, int pageSize = 10)
@@ -110,16 +130,6 @@ namespace ScannerWebApp.Controllers
             ViewBag.ActionName = actionName;
 
             ViewBag.DynamicTitle = "Intraday Rocket Bearish";
-            return View("scanner", model);
-        }
-        public async Task<IActionResult> GetshortStocksDayAgoAsync(int page = 1, int pageSize = 10)
-        {
-            var stocks = await _scanner.GetshortStocksDayAgo();
-            string actionName = ControllerContext.ActionDescriptor.ActionName;
-            var model = paginationExtension.PaginationExtensionMethod(stocks, page, pageSize);
-            ViewBag.ActionName = actionName;
-
-            ViewBag.DynamicTitle = "Bearish 1 Day Ago";
             return View("scanner", model);
         }
         public async Task<IActionResult> GetSwingStocksAsync(int page = 1, int pageSize = 10)
